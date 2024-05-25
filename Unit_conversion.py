@@ -12,7 +12,7 @@ class Main:
         whichUnits = input("Do jakého systému si přejete převést hodnotu? [B]ritského/[M]etrického\n").upper()
         if whichUnits == "B":
             while not unit:
-                unit = input("Zadejte v jakých jednotkách je hodnota: [mm] [cm] [dm] [m] [km]").lower()
+                unit = input("Zadejte, v jakých jednotkách je hodnota: [mm] [cm] [dm] [m] [km]").lower()
                 match unit:
                     case "mm":
                         value /= 10
@@ -34,7 +34,7 @@ class Main:
             break
         elif whichUnits == "M":
             while not unit:
-                unit = input("Zadejte v jakých jednotkách je hodnota: [in] [ft] [yd] [mi]").lower()
+                unit = input("Zadejte, v jakých jednotkách je hodnota: [in] [ft] [yd] [mi]").lower()
                 match unit:
                     case "in":
                         value /= 12
