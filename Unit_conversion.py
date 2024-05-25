@@ -1,7 +1,7 @@
 class Main:
     while True:
         try:
-            value = int(input("Zadejte pouze číselnou hodnotu na převod: "))
+            value = float(input("Zadejte pouze číselnou hodnotu na převod: "))
             valueToPrint = str(value)
             break
         except:
@@ -26,10 +26,11 @@ class Main:
                         value *= 100000
                     case _:
                         unit = str()
-                        print("\n!! Zadejte prosím zkratku jednotek, ve kterých je hodnota [mm] [cm] [dm] [m] [km] !!\n")
-            print(valueToPrint + " " + unit + " je " + str(round(float(value) / 2.54, 2)) + " palců, " + str(
-                round(float(value) / 30.48, 2)) + " stop, " + str(round(float(value) / 91.44, 2)) + " yardů a " + str(
-                round(float(value) / 160934, 5)) + " mil.")
+                        print(
+                            "\n!! Zadejte prosím zkratku jednotek, ve kterých je hodnota [mm] [cm] [dm] [m] [km] !!\n")
+            print(valueToPrint + " " + unit + " je " + str(round(value / 2.54, 2)) + " palců, " + str(
+                round(value / 30.48, 2)) + " stop, " + str(round(value / 91.44, 2)) + " yardů a " + str(
+                round(value / 160934, 5)) + " mil.")
             break
         elif whichUnits == "M":
             while not unit:
@@ -46,11 +47,11 @@ class Main:
                     case _:
                         unit = str()
                         print("\n!! Zadejte prosím zkratku jednotek, ve kterých je hodnota [in] [ft] [yd] [mi] !!\n")
-            print(valueToPrint + " " + unit + " je " + str(round(float(value) * 304.8, 2)) + " milimetrů, " + str(
-                round(float(value) * 30.48, 2)) + " centimetrů, " + str(
-                round(float(value) * 3.048, 2)) + " decimetrů, " + str(
-                round(float(value) * 0.3048, 5)) + " metrů a " + str(
-                round(float(value) * 0.0003048, 5)) + " kilometrů.")
+            print(valueToPrint + " " + unit + " je " + str(round(value * 304.8, 2)) + " milimetrů, " + str(
+                round(value * 30.48, 2)) + " centimetrů, " + str(
+                round(value * 3.048, 2)) + " decimetrů, " + str(
+                round(value * 0.3048, 5)) + " metrů a " + str(
+                round(value * 0.0003048, 5)) + " kilometrů.")
             break
         else:
             print("\n!! Špatně zadaný indikátor pro výběr systému. Zadejte prosím buď [B]ritský nebo [M]etrický "
